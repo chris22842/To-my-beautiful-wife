@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To My Beautiful Wife</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fffaf9;
+      color: #4b2e2e;
+    }
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fdeaea;
+    }
+    .login input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #d8baba;
+    }
+    .blog {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .post {
+      margin-bottom: 40px;
+    }
+    .post img, .post gif {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    h1 {
+      text-align: center;
+      color: #b45f5f;
+    }
+    .post-title {
+      font-size: 1.5rem;
+      color: #a04f4f;
+      margin-bottom: 10px;
+    }
+    .post-date {
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login" id="login-section">
+    <h2>Welcome</h2>
+    <p>Please enter the password to view the letters</p>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+
+  <div class="blog" id="blog-section">
+    <h1>To My Beautiful Wife</h1>
+
+    <div class="post">
+      <div class="post-title">A Letter on a Quiet Morning</div>
+      <div class="post-date">July 8, 2025</div>
+      <p>Good morning, love. I woke up today thinking about how lucky I am to have you next to me every night. Even in the quiet, your presence is louder than anything else in the world.</p>
+      <img src="https://media.giphy.com/media/Q56ZI04r6CakM/giphy.gif" alt="Cuddling cats" />
+    </div>
+
+    <!-- Add more posts like the one above here -->
+
+  </div>
+
+  <script>
+    const PASSWORD = "foreverus"; // Change this password as you like
+
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === PASSWORD) {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('blog-section').style.display = 'block';
+      } else {
+        alert('Incorrect password. Try again.');
+      }
+    }
+  </script>
+</body>
+</html>
