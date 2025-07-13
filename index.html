@@ -1,127 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To My Beautiful Wife</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fffaf9;
-      color: #4b2e2e;
-    }
-    .login {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #fdeaea;
-    }
-    .login input {
-      margin: 10px;
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #d8baba;
-    }
-    .blog {
-      display: none;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .post {
-      margin-bottom: 40px;
-    }
-    .post-content {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .post-content p {
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-      line-height: 1.6;
-    }
-    .image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .image-gallery img {
-      max-width: 200px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #b45f5f;
-    }
-    .post-title {
-      font-size: 1.8rem;
-      color: #a04f4f;
-      margin-bottom: 10px;
-    }
-    .post-date {
-      font-size: 0.9rem;
-      color: #999;
-      margin-bottom: 20px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To My Beautiful Wife</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fffaf9;
+    color: #4b2e2e;
+  }
+  .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdeaea;
+  }
+  .login input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #d8baba;
+  }
+  .blog {
+    display: none;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .post {
+    margin-bottom: 40px;
+  }
+  .post-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .post-content p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+  }
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .image-gallery figure {
+    margin: 0;
+    max-width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .image-gallery figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .image-gallery img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .image-gallery figcaption {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  h1 {
+    text-align: center;
+    color: #b45f5f;
+  }
+  .post-title {
+    font-size: 1.8rem;
+    color: #a04f4f;
+    margin-bottom: 10px;
+  }
+  .post-date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 20px;
+  }
+</style>
 </head>
 <body>
-  <div class="login" id="login-section">
-    <h2>Welcome</h2>
-    <p>Please enter the password to view the letters</p>
-    <input type="password" id="password" placeholder="Enter password" />
-    <button onclick="checkPassword()">Enter</button>
-  </div>
+<div class="login" id="login-section">
+  <h2>Welcome</h2>
+  <p>Please enter the password to view the letters</p>
+  <input type="password" id="password" placeholder="Enter password" />
+  <button onclick="checkPassword()">Enter</button>
+</div>
 
-  <div class="blog" id="blog-section">
-    <h1>To My Beautiful Wife</h1>
+<div class="blog" id="blog-section">
+  <h1>To My Beautiful Wife</h1>
 
-    <div class="post">
-      <div class="post-content">
-        <div class="post-title">ONE YEAR OF SERVICE 🥰</div>
-        <div class="post-date">July 8, 2025</div>
-        <p>
-          To my darling wife,<br><br>
-          Happy one year anniversary! Can you believe we hit one year of marriage? Looking back it's not hard to believe considering we've been together a long time now, but a year of marriage is still impressive. Still I'd like to say how grateful I am that you said "yes" to marrying me and how happy I've been with you this past year. There's not a day that goes by that I'm not reminded of how lucky I am to be with you, whether we are watching movies, parallel playing on the couch, or we are on a random date. I've loved you for over a decade and that love keeps growing exponentially! ❤️ 📈<br><br>
-          Our adventures together have been amazing, from vacationing with your parents 😂🤮 in Orlando and California and having to sneak our "love" from them to now being married and on this cruise boat we have grown so much. And to think this is just the beginning of our lives gives me the joy I never knew I'd have ❤️❤️. I have always dreamt of us sailing into the sunset together (figuratively) and to get to do that with you literally is a dream come true. I love you for the woman you were, for the confident, amazing, strong, sexy, and fit woman you've become ❤️.<br><br>
-          I WILL NEVER STOP LOVING YOU YAMILETH ❤️<br><br>
-          FYI this was super hard to code and I learned more about coding than I thought I would 😒. I hope everything looks good 😅
-        </p>
+  <div class="post">
+    <div class="post-content">
+      <div class="post-title">ONE YEAR OF SERVICE 🥰</div>
+      <div class="post-date">July 8, 2025</div>
+      <p>
+        To my darling wife,<br><br>
+        Happy one year anniversary! Can you believe we hit one year of marriage? Looking back it's not hard to believe considering we've been together a long time now, but a year of marriage is still impressive. Still I'd like to say how grateful I am that you said "yes" to marrying me and how happy I've been with you this past year. There's not a day that goes by that I'm not reminded of how lucky I am to be with you, whether we are watching movies, parallel playing on the couch, or we are on a random date. I've loved you for over a decade and that love keeps growing exponentially! ❤️ 📈<br><br>
+        Our adventures together have been amazing, from vacationing with your parents 😂🤮 in Orlando and California and having to sneak our "love" from them to now being married and on this cruise boat we have grown so much. And to think this is just the beginning of our lives gives me the joy I never knew I'd have ❤️❤️. I have always dreamt of us sailing into the sunset together (figuratively) and to get to do that with you literally is a dream come true. I love you for the woman you were, for the confident, amazing, strong, sexy, and fit woman you've become ❤️.<br><br>
+        I WILL NEVER STOP LOVING YOU YAMILETH ❤️<br><br>
+        FYI this was super hard to code and I learned more about coding than I thought I would 😒. I hope everything looks good 😅
+      </p>
 
-        <div class="image-gallery">
+      <div class="image-gallery">
+        <figure>
           <img src="https://raw.githubusercontent.com/chris22842/To-my-beautiful-wife/refs/heads/main/file_000000005260622fbd251350b068a1df.png" alt="Oil painting of proposal" />
+          <figcaption>Our Proposal</figcaption>
+        </figure>
+        <figure>
           <img src="https://raw.githubusercontent.com/chris22842/To-my-beautiful-wife/refs/heads/main/file_00000000e67461f8a3a5d5f8e0c7d96c.png" alt="Image 2" />
+          <figcaption>Sunset Together</figcaption>
+        </figure>
+        <figure>
           <img src="https://raw.githubusercontent.com/chris22842/To-my-beautiful-wife/refs/heads/main/file_0000000060f0622f91412e2813fb7e9b.png" alt="Image 3" />
+          <figcaption>Our Journey</figcaption>
+        </figure>
+        <figure>
           <img src="https://raw.githubusercontent.com/chris22842/To-my-beautiful-wife/refs/heads/main/file_00000000245461fdbf1b3e078402e117.png" alt="Image 4" />
-        </div>
-
+          <figcaption>Forever Yours</figcaption>
+        </figure>
       </div>
-    </div>
 
+    </div>
   </div>
 
-  <script>
-    const PASSWORD = "foreverus"; // Change this password as you like
+</div>
 
-    function checkPassword() {
-      const input = document.getElementById('password').value;
-      if (input === PASSWORD) {
-        document.getElementById('login-section').style.display = 'none';
-        document.getElementById('blog-section').style.display = 'block';
-      } else {
-        alert('Incorrect password. Try again.');
-      }
-    }
-  </script>
+<script>
+const PASSWORD = "foreverus"; // Change this password as you like
+
+function checkPassword() {
+  const input = document.getElementById('password').value;
+  if (input === PASSWORD) {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('blog-section').style.display = 'block';
+  } else {
+    alert('Incorrect password. Try again.');
+  }
+}
+</script>
 </body>
 </html>
